@@ -1,0 +1,9 @@
+Feature: expense
+        As a user
+        I can add expense to account
+        so that I can view balance
+
+Scenario: Normal Expense
+            Given a user have balance 200 exists
+            When I spend 100 for buy pork
+            Then balance is 100
