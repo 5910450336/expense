@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HistoryController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HistoryController">
    <children>
-      <Label alignment="CENTER_RIGHT" layoutX="171.0" layoutY="55.0" prefHeight="43.0" prefWidth="193.0" text="0.0" textAlignment="CENTER">
+      <Label fx:id="balanceLabel"  alignment="CENTER_RIGHT" layoutX="171.0" layoutY="55.0" prefHeight="43.0" prefWidth="193.0" text="0.0" textAlignment="CENTER">
          <font>
             <Font size="35.0" />
          </font>
@@ -25,7 +25,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="76.0" layoutY="130.0" prefHeight="30.0" prefWidth="108.0" text="0.00">
+      <Label fx:id="spendLabel" alignment="CENTER_RIGHT" layoutX="76.0" layoutY="130.0" prefHeight="30.0" prefWidth="108.0" text="0.00">
          <font>
             <Font size="20.0" />
          </font>
@@ -35,21 +35,21 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="281.0" layoutY="132.0" prefHeight="26.0" prefWidth="117.0" text="0.00">
+      <Label fx:id="incomeLabel" alignment="CENTER_RIGHT" layoutX="281.0" layoutY="132.0" prefHeight="26.0" prefWidth="117.0" text="0.00">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
       <TableView fx:id="table" layoutX="4.0" layoutY="164.0" prefHeight="377.0" prefWidth="393.0">
         <columns>
-          <TableColumn fx:id="typeCol" prefWidth="41.0" text="" />
-          <TableColumn fx:id="desCol" prefWidth="201.0" text="" />
-            <TableColumn fx:id="moneyCol" prefWidth="150.0" text="" />
+          <TableColumn fx:id="typeCol" prefWidth="41.0" text="type" />
+          <TableColumn fx:id="desCol" prefWidth="201.0" text="des" />
+            <TableColumn fx:id="moneyCol" prefWidth="150.0" text="money" />
         </columns>
       </TableView>
-      <TextField fx:id="des" alignment="CENTER_RIGHT" layoutX="63.0" layoutY="549.0" prefHeight="27.0" prefWidth="129.0" text="" />
-      <TextField fx:id="money" alignment="CENTER_RIGHT" layoutX="196.0" layoutY="549.0" prefHeight="27.0" prefWidth="85.0" text="" />
-      <TextField fx:id="type" layoutX="14.0" layoutY="549.0" prefHeight="27.0" prefWidth="44.0" text="" />
+      <TextField fx:id="des" alignment="CENTER_RIGHT" layoutX="63.0" layoutY="549.0" prefHeight="27.0" prefWidth="129.0" promptText="description" text="" />
+      <TextField fx:id="money" alignment="CENTER_RIGHT" layoutX="196.0" layoutY="549.0" prefHeight="27.0" prefWidth="85.0" promptText="money" text="" />
+      <TextField fx:id="type" layoutX="14.0" layoutY="549.0" prefHeight="27.0" prefWidth="44.0" promptText="type" text="" />
       <Button fx:id="add" layoutX="288.0" layoutY="549.0" mnemonicParsing="false" onAction="#handleButtonAdd" text="add" />
       <Button layoutX="335.0" layoutY="549.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="58.0" text="edit" />
    </children>
