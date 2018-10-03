@@ -1,3 +1,5 @@
+package csku.spender;
+
 public class OverExpenseException extends Exception {
     public OverExpenseException() {}
     public OverExpenseException(String reason) {

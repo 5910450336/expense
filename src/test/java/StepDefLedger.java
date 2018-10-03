@@ -1,3 +1,5 @@
+import csku.spender.Account;
+import csku.spender.OverExpenseException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -29,7 +31,7 @@ public class StepDefLedger {
 
 
     @When("I spend (\\d+) for buy (.*)")
-    public void i_spend_for_buy(int expense, String desc) throws OverExpenseException{
+    public void i_spend_for_buy(int expense, String desc) throws OverExpenseException {
         account.expenses(expense, desc);
     }
 
